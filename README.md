@@ -1,11 +1,11 @@
-# `uwat.cf` [![Jenkins](https://img.shields.io/jenkins/s/https/ci.quantum2.xyz/job/uwat.cf.svg)](https://ci.quantum2.xyz/job/uwat.cf/) [![GitHub](https://img.shields.io/github/license/quantum5/uwat.cf.svg)](LICENSE)
+# [`uwat.cf`][1] [![Jenkins](https://img.shields.io/jenkins/s/https/ci.quantum2.xyz/job/uwat.cf.svg)](https://ci.quantum2.xyz/job/uwat.cf/) [![GitHub](https://img.shields.io/github/license/quantum5/uwat.cf.svg)](LICENSE)
 
-`uwat.cf` is a gateway to various resources related to the University of
+[`uwat.cf`][1] is a gateway to various resources related to the University of
 Waterloo, made by Waterloo students for Waterloo students.
 
 We provide shortcut links to make your life easier. Instead of scrambling to
 remember that site where it shows your exam schedule and seating, simply go to
-[uwat.cf/exams][1]. The [homepage][2] is a list of these shortcuts.
+[uwat.cf/exams][2]. The [homepage][1] is a list of these shortcuts.
 
 ## Contributing
 
@@ -27,8 +27,8 @@ as you did in `src/index.html`. `redirects.conf` is included inside an
 
 Thank you for contributing.
 
-  [1]: https://uwat.cf/exams
-  [2]: https://uwat.cf
+  [1]: https://uwat.cf
+  [2]: https://uwat.cf/exams
   [3]: src/index.html
   [4]: src/redirects.conf
   [5]: https://nginx.org/en/docs/http/ngx_http_map_module.html
