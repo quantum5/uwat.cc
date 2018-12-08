@@ -1,0 +1,8 @@
+language: python
+python:
+  # Current production server runs Debian stretch, which has Python 3.5.
+  - '3.5'
+install:
+  - pip install -r requirements.txt
+script:
+  - python check.py && python build.py

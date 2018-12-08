@@ -31,6 +31,9 @@ checks with [`python3 check.py`][4].
 To generate the HTML for the site, run [`python3 build.py`][5]. Output will be
 generated in a directory called `dist`.
 
+Pull requests will be checked with Travis, by running [`check.py`][4] and
+[`build.py`][5]. Please ensure that builds pass.
+
 Thank you for contributing.
 
   [1]: https://uwat.cf
