@@ -1,0 +1,57 @@
+other_links:
+  - name: /link
+    target: /
+
+sections:
+  - id: general
+    name: General
+    links:
+      - name: /learn
+        target: https://learn.uwaterloo.ca/d2l/home
+        description: LEARN
+      - name: /quest
+        target: https://quest.pecs.uwaterloo.ca/psp/SS/ACADEMIC/SA/?cmd=login&languageCd=ENG
+        description: Quest
+      - name: /wp
+        target: https://idm.uwaterloo.ca/search/authen/
+        description: WatIAM white pages
+      - name: /watcard
+        target: https://watcard.uwaterloo.ca/OneWeb/Account/LogOn
+        description: Manage my WatCard
+      - name: /exams
+        target: https://odyssey.uwaterloo.ca/teaching/schedule
+        description: Exam seating and schedules
+
+  - id: math
+    name: Faculty of Mathematics
+    links:
+      - name: /marmoset
+        target: https://marmoset.student.cs.uwaterloo.ca/
+        description: Marmoset
+      - name: /mathexams
+        target: http://mathsoc.uwaterloo.ca/exambank
+        description: MathSoc Exam Bank
+
+  - id: eng
+    name: Faculty of Engineering
+    links:
+      - name: /engexams
+        target: https://exams.engsoc.uwaterloo.ca/
+        description: EngSoc Exam Bank
+      - name: /engrank
+        target: https://engug.uwaterloo.ca/
+        description: Undergrad student rankings
+
+  - id: coop
+    name: Co-operative Education
+    links:
+      - name: /coopcal
+        target: https://uwaterloo.ca/co-operative-education/important-dates
+        description: Co-op important dates
+
+  - id: finance
+    name: Finances
+    links: 
+      - name: /endow
+        target: https://uwaterloo.ca/forms/finance/user?destination=endowment_request
+        description: Endowment refund

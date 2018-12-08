@@ -1,7 +1,10 @@
+#!/usr/bin/env python3
 import errno
 import os
+from html import escape
 from hashlib import sha256
 
+import yaml
 from rcssmin import cssmin
 
 DIR = os.path.dirname(__file__)
@@ -9,8 +12,6 @@ SRC_DIR = os.path.join(DIR, 'src')
 DIST_DIR = os.path.join(DIR, 'dist')
 ASSETS_SRC = os.path.join(SRC_DIR, 'assets')
 ASSETS_DIST = os.path.join(DIST_DIR, 'assets')
-
-bytes = type(b'')
 
 
 def build_assets():
@@ -26,29 +27,62 @@ def build_assets():
         dist_name = '%s-%s%s' % (name, hash, ext)
 
         if ext == '.css':
-            content = cssmin(content)
+            content = cssmin(content.decode('utf-8')).encode('utf-8')
 
         with open(os.path.join(ASSETS_DIST, dist_name), 'wb') as f:
             f.write(content)
-        name_map.append((bytes(asset), bytes(dist_name)))
+        name_map.append((asset, dist_name))
     return name_map
 
 
-def build_files(html_replace):
-    for name in os.listdir(SRC_DIR):
-        src_path = os.path.join(SRC_DIR, name)
-        if not os.path.isfile(src_path):
-            continue
+def build_links(links):
+    output = []
+    for section in links['sections']:
+        output.append('    <h2 id="%s">%s</h2>' % (section['id'], escape(section['name'])))
+        output.append('    <ul>')
 
-        with open(os.path.join(SRC_DIR, name), 'rb') as f:
-            content = f.read()
+        for link in section['links']:
+            output.append('        <li><a href="{url}">{url}</a> &mdash; {description}</li>'.format(
+                url=escape(link['name']), description=escape(link['description'])
+            ))
 
-        if name.endswith('.html'):
-            for old, new in html_replace:
-                content = content.replace(old, new)
+        output.append('    </ul>')
+        output.append('')
 
-        with open(os.path.join(DIST_DIR, name), 'wb') as f:
-            f.write(content)
+    return '\n'.join(output)
+
+
+def build_redirects(links):
+    output = []
+
+    def build_link(link):
+        output.append('%s "%s";' % (link['name'], link['target']))
+
+    if 'other_links' in links:
+        for link in links['other_links']:
+            build_link(link)
+        output.append('')
+
+    for section in links['sections']:
+        output.append('# %s' % (section['name'],))
+        for link in section['links']:
+            build_link(link)
+        output.append('')
+
+    with open(os.path.join(DIST_DIR, 'redirects.conf'), 'w', encoding='utf-8') as f:
+        f.write('\n'.join(output))
+
+
+def build_index(html_replace, links):
+    with open(os.path.join(SRC_DIR, 'index.html'), encoding='utf-8') as f:
+        content = f.read()
+
+    for old, new in html_replace:
+        content = content.replace(old, new)
+    content = content.replace('{listing}', build_links(links))
+
+    with open(os.path.join(DIST_DIR, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(content)
 
 
 def main():
@@ -58,8 +92,13 @@ def main():
         if e.errno != errno.EEXIST:
             raise
 
+    with open(os.path.join(SRC_DIR, 'links.yml'), encoding='utf-8') as f:
+        links = yaml.safe_load(f)
+
     name_map = build_assets()
-    build_files(name_map)
+    build_index(name_map, links)
+    build_redirects(links)
+
 
 if __name__ == '__main__':
     main()

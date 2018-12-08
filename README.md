@@ -13,22 +13,28 @@ Everyone is welcome to contribute! Simply send in a pull request with your
 useful link, and if it passes quality control, it will be merged and made
 available to the public.
 
-To add a link, add the shortcut link and description to the relevant section in
-[`src/index.html`][3]. You can also add new sections if none of the existing
-sections fit the bill.
+To add a link, add find the relevant section in under [`src/links.yml`][3],
+and under the `links` key, add a new item for your link. This item should be a
+mapping with three keys:
 
-To add the redirect, add it to [`src/redirects.conf`][4], into the same place
-as you did in `src/index.html`. `redirects.conf` is included inside an
-[nginx `map` block][5], and the syntax is:
+* `name`: the shortcut link, starting with `/`, followed by letters, numbers,
+  and `-`;
+* `target`: the URL to redirect to; and
+* `description`: the description of the link shown on the home page.
 
-```
-/shortcut "https://example.com/long/url";
-```
+To be able to run the python scripts locally, run
+`pip install -r requirements.txt` to install our dependencies.
+
+To verify that your changes follow the correct format, run automatic sanity
+checks with [`python3 check.py`][4].
+
+To generate the HTML for the site, run [`python3 build.py`][5]. Output will be
+generated in a directory called `dist`.
 
 Thank you for contributing.
 
   [1]: https://uwat.cf
   [2]: https://uwat.cf/exams
-  [3]: src/index.html
-  [4]: src/redirects.conf
-  [5]: https://nginx.org/en/docs/http/ngx_http_map_module.html
+  [3]: src/links.yml
+  [4]: check.py
+  [5]: build.py
