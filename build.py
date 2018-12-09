@@ -3,6 +3,7 @@ import errno
 import os
 from html import escape
 from hashlib import sha256
+from shutil import copyfile
 
 import yaml
 from rcssmin import cssmin
@@ -12,6 +13,7 @@ SRC_DIR = os.path.join(DIR, 'src')
 DIST_DIR = os.path.join(DIR, 'dist')
 ASSETS_SRC = os.path.join(SRC_DIR, 'assets')
 ASSETS_DIST = os.path.join(DIST_DIR, 'assets')
+ICONS_SRC = os.path.join(SRC_DIR, 'icons')
 
 
 def build_assets():
@@ -33,6 +35,11 @@ def build_assets():
             f.write(content)
         name_map.append((asset, dist_name))
     return name_map
+
+
+def build_icons():
+    for icon in os.listdir(ICONS_SRC):
+        copyfile(os.path.join(ICONS_SRC, icon), os.path.join(DIST_DIR, icon))
 
 
 def build_links(links):
@@ -96,6 +103,7 @@ def main():
         links = yaml.safe_load(f)
 
     name_map = build_assets()
+    build_icons()
     build_index(name_map, links)
     build_redirects(links)
 
