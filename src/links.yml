@@ -36,7 +36,7 @@ sections:
         target: https://marmoset.student.cs.uwaterloo.ca/
         description: Marmoset
       - name: /mathexams
-        target: http://mathsoc.uwaterloo.ca/exambank
+        target: https://mathsoc.uwaterloo.ca/university/exambank
         description: MathSoc Exam Bank
 
   - id: eng
