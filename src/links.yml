@@ -39,7 +39,7 @@ sections:
         target: https://mathsoc.uwaterloo.ca/university/exambank
         description: MathSoc Exam Bank
       - name: /markus
-        target: https://www.student.cs.uwaterloo.ca/~markus/
+        target: https://markus.student.cs.uwaterloo.ca/
         description: MarkUs
 
   - id: eng
