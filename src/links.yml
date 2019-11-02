@@ -38,6 +38,9 @@ sections:
       - name: /mathexams
         target: https://mathsoc.uwaterloo.ca/university/exambank
         description: MathSoc Exam Bank
+      - name: /markus
+        target: https://markus.student.cs.uwaterloo.ca/
+        description: MarkUs
 
   - id: eng
     name: Faculty of Engineering
