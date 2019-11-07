@@ -16,6 +16,9 @@ sections:
       - name: /quest
         target: https://quest.pecs.uwaterloo.ca/psp/SS/ACADEMIC/SA/?cmd=login&languageCd=ENG
         description: Quest
+      - name: /owa
+        target: https://outlook.office365.com/mail/inbox
+        description: Outlook Web Access
       - name: /wp
         target: https://idm.uwaterloo.ca/search/authen/
         description: WatIAM white pages
