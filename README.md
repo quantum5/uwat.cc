@@ -1,11 +1,11 @@
-# [`uwat.cf`][1] [![Jenkins](https://img.shields.io/jenkins/s/https/ci.quantum2.xyz/job/uwat.cf.svg)](https://ci.quantum2.xyz/job/uwat.cf/) [![GitHub](https://img.shields.io/github/license/quantum5/uwat.cf.svg)](LICENSE)
+# [`uwat.cc`][1] [![Jenkins](https://img.shields.io/jenkins/s/https/ci.quantum2.xyz/job/uwat.cc.svg)](https://ci.quantum2.xyz/job/uwat.cc/) [![GitHub](https://img.shields.io/github/license/quantum5/uwat.cc.svg)](LICENSE)
 
-[`uwat.cf`][1] is a gateway to various resources related to the University of
+[`uwat.cc`][1] is a gateway to various resources related to the University of
 Waterloo, made by Waterloo students for Waterloo students.
 
 We provide shortcut links to make your life easier. Instead of scrambling to
 remember that site where it shows your exam schedule and seating, simply go to
-[uwat.cf/exams][2]. The [homepage][1] is a list of these shortcuts.
+[uwat.cc/exams][2]. The [homepage][1] is a list of these shortcuts.
 
 ## Contributing
 
@@ -36,8 +36,8 @@ Pull requests will be checked with Travis, by running [`check.py`][4] and
 
 Thank you for contributing.
 
-  [1]: https://uwat.cf
-  [2]: https://uwat.cf/exams
+  [1]: https://uwat.cc
+  [2]: https://uwat.cc/exams
   [3]: src/links.yml
   [4]: check.py
   [5]: build.py
