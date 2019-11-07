@@ -218,7 +218,7 @@ body {
 }
 
 #container {
-    max-width: 576px;
+    max-width: 450px;
     width: -webkit-fill-available;
     width: -webkit-fit-content;
     width: -moz-fit-content;
