@@ -14,7 +14,7 @@ sections:
         target: https://learn.uwaterloo.ca/d2l/home
         description: LEARN
       - name: /quest
-        target: https://idp.uwaterloo.ca/idp/profile/SAML2/Unsolicited/SSO?providerId=quest.ss.apps.uwaterloo.ca
+        target: https://adfs.uwaterloo.ca/adfs/ls/idpinitiatedsignon.aspx?LoginToRP=urn:quest.ss.apps.uwaterloo.ca
         description: Quest
       - name: /owa
         target: https://outlook.office365.com/mail/inbox
