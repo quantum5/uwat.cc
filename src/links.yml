@@ -59,7 +59,7 @@ sections:
     name: Co-operative Education
     links:
       - name: /works
-        target: https://cas.uwaterloo.ca/cas/login?service=https://waterlooworks.uwaterloo.ca/waterloo.htm
+        target: https://waterlooworks.uwaterloo.ca/waterloo.htm?action=login
         description: WaterlooWorks student login
       - name: /coopcal
         target: https://uwaterloo.ca/co-operative-education/important-dates
