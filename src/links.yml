@@ -31,6 +31,9 @@ sections:
       - name: /print
         target: https://printuw.private.uwaterloo.ca:9192/user
         description: UW Print
+      - name: /git
+        target: https://git.uwaterloo.ca/
+        description: GitLab
 
   - id: math
     name: Faculty of Mathematics
