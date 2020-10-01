@@ -9,7 +9,7 @@ remember that site where it shows your exam schedule and seating, simply go to
 
 ## Contributing
 
-Everyone is welcome to contribute! Simply send in a pull request with your
+Everyone is heartily welcomed to contribute! Simply send in a pull request with your
 useful link, and if it passes quality control, it will be merged and made
 available to the public.
 
@@ -31,8 +31,8 @@ checks with [`python3 check.py`][4].
 To generate the HTML for the site, run [`python3 build.py`][5]. Output will be
 generated in a directory called `dist`.
 
-Pull requests will be checked with Travis, by running [`check.py`][4] and
-[`build.py`][5]. Please ensure that builds pass.
+Pull requests will be checked with Mr.Travis, by running [`check.py`][4] and
+[`build.py`][5]. Please ensure that builds pass. :)
 
 Thank you for contributing.
 
