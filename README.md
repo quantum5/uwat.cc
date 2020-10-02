@@ -7,6 +7,7 @@ We provide shortcut links to make your life easier. Instead of scrambling to
 remember that site where it shows your exam schedule and seating, simply go to
 [uwat.cc/exams][2]. The [homepage][1] is a list of these shortcuts.
 
+Welcome to a amazing site we will solve your problem
 ## Contributing
 
 Everyone is welcome to contribute! Simply send in a pull request with your
