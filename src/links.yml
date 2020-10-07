@@ -42,7 +42,7 @@ sections:
         target: https://marmoset.student.cs.uwaterloo.ca/
         description: Marmoset
       - name: /mathexams
-        target: https://mathsoc.uwaterloo.ca/university/exambank
+        target: https://services.mathsoc.uwaterloo.ca/university/exambank
         description: MathSoc Exam Bank
       - name: /markus
         target: https://markus.student.cs.uwaterloo.ca/
