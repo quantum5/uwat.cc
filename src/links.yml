@@ -34,6 +34,9 @@ sections:
       - name: /git
         target: https://git.uwaterloo.ca/
         description: GitLab
+      - name: /portal
+        target: https://portal.uwaterloo.ca/
+        description: Portal
 
   - id: math
     name: Faculty of Mathematics
