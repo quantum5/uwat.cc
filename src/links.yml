@@ -37,6 +37,9 @@ sections:
       - name: /portal
         target: https://portal.uwaterloo.ca/
         description: Portal
+      - name: /ofcourse
+        target: https://odyssey.uwaterloo.ca/ofcourse/app/
+        description: Projected course offerings
 
   - id: math
     name: Faculty of Mathematics
