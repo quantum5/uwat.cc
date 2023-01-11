@@ -3,3 +3,7 @@
 
 # uwat.cc files
 /dist
+
+# virtualenv
+env
+venv
