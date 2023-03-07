@@ -40,6 +40,9 @@ sections:
       - name: /ofcourse
         target: https://odyssey.uwaterloo.ca/ofcourse/app/
         description: Projected course offerings
+      - name: /exams
+        target: https://odyssey.uwaterloo.ca/teaching/schedule
+        description: Exam schedule and seating
 
   - id: math
     name: Faculty of Mathematics
