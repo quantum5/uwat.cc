@@ -10,6 +10,9 @@ sections:
   - id: general
     name: General
     links:
+      - name: /example
+        target: https://example.com
+        description: Example Link
       - name: /learn
         target: https://learn.uwaterloo.ca/d2l/home
         description: LEARN
